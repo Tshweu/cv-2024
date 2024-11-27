@@ -10,7 +10,7 @@
 #head-logo{
     grid-column: 2;
     grid-row: 1/4;
-    background: url(/src/assets/Logo-banner.svg);
+    background: url(../../assets/Logo-banner.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
