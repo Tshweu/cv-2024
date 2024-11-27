@@ -1,0 +1,148 @@
+@keyframes menu-slide {
+  0%{opacity: 0;transform: scaleX(0);}
+  50%{opacity: 0.4;right: -770px;}
+  100%{opacity: 1;transition:transform 100ms ease-in-out;transform: scaleX(1);transform-origin: right;right: 52px;}
+}
+
+@keyframes menu-slide-out {
+  0%{opacity: 1;transform: scaleX(1);}
+  50%{opacity: 0.4;right:52px;}
+  100%{opacity: 0;transition:transform 100ms ease-in-out;transform: scaleX(0);transform-origin: right;}
+}
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  all:unset;
+  color: white!important;
+}
+
+a:hover{
+  color: red!important;
+}
+
+.navigation{
+  position: fixed;
+  top: 2rem;
+  right: 10%;
+  height: 60px;
+  width: 700px;
+}
+ /*******************************
+  menu button start
+  ********************************/
+.menu-btn{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+  background-color: red;
+  border-radius: 10px;
+
+  z-index: 9;
+}
+
+.menu-line{
+  width: 35px;
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  transition: all 500ms ease-in-out;
+}
+ /*******************************
+  sudo elements for top and bottom lines on burger menu
+  ********************************/
+.menu-line::before,
+.menu-line::after{
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  transition: all 500ms ease-in-out;
+}
+
+.menu-line::before{
+  transform: translateY(-16px);
+}
+
+.menu-line::after{
+  transform: translateY(16px);
+}
+ /*******************************
+  animation for click
+  ********************************/
+.menu-btn.open .menu-line{
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu-btn.open .menu-line::before{
+  transform: rotate(45deg) translate(35px,-35px);
+}
+
+.menu-btn.open .menu-line::after{
+  transform: rotate(-45deg) translate(35px,35px);
+}
+/*******************************
+  menu button end
+********************************/
+
+/*******************************
+  menu bar start
+********************************/
+  .menu-bar{
+    display: grid;
+    position: absolute;
+
+    top: 0;
+    right: 52px;
+    padding: 18px 22px 18px 18px;
+
+    background-color:rgba(46, 46, 46, 50%);
+    border-radius: 10px;
+    grid-template-columns: repeat(5,auto);
+    column-gap: 35px;
+
+     /* animation */
+     animation: menu-slide 350ms ease-in-out;
+     /* transition: animation 200ms ease-in-out;    */
+
+  }
+
+
+  .mb-close{
+    display: none;
+    /* transform: opacity(0);
+    transition: transform 100ms ease-out;
+     opacity: 1;
+    transform: translateX(52px);
+    transform-origin: right;   */
+  }
+
+  .menu-item{
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+/*******************************
+  menu bar end
+********************************/
+@media(max-width:680px){
+  .menu-bar{
+    display: grid;
+    top: 40px;
+    row-gap: 10px;
+    grid-template-columns: repeat(1,auto);
+  }
+}

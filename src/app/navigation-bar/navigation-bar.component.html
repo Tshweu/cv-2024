@@ -1,0 +1,16 @@
+<nav class="navigation">
+
+        <!-- hamburger menu -->
+        <div class="{{ menuClass }}" (click)="checkOnClick()">
+            <div class="menu-line"></div>
+        </div>
+        <!-- Nav bar items -->
+        <div class="{{ menuBar }}">
+            <div class="menu-item"><a href="#" (click)="checkOnClick()">HOME</a></div>
+            <div class="menu-item"><a href="#about" routerLinkActive="active" (click)="checkOnClick()">ABOUT</a></div>
+            <div class="menu-item"><a href="#skills" (click)="checkOnClick()">SKILLS</a></div>
+            <div class="menu-item"><a href="#portfolio" (click)="checkOnClick()">PORTFOLIO</a></div>
+            <div class="menu-item"><a href="#contact" (click)="checkOnClick()">CONTACT</a></div>
+        </div>
+
+</nav>

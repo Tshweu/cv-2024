@@ -1,0 +1,59 @@
+#background{
+    /* background-size: auto; */
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    /* top: 0%; */
+    background-image: url("/assets/background-stripes.svg") ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: 100%;
+    background-position-y:190px;
+    overflow: hidden;
+}
+
+.img{
+  margin: auto;
+}
+
+.heading{
+    display: block;
+    margin: auto auto 0 auto;
+}
+
+.name{
+    /* display: block; */
+    margin: auto auto 50px auto;
+    border-style: solid;
+    border-width: 10px;
+    max-width: 400px;
+    height: 100px;
+    border-color: grey;
+    backdrop-filter: blur(10px);
+    background-color:rgba(36, 36, 36, 0.5);
+}
+
+p{
+    font-size: x-large;
+    display: block;
+    text-align: center;
+    color: white;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media only screen and (max-width: 1000px){
+  #background{
+    background: url(/assets/background-stripes.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 700px){
+    #background{
+        background: url(/assets/background-stripes.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+}
+
