@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="509" height="131.066" viewBox="0 0 509 131.066">
+  <defs>
+    <filter id="Logo" x="0" y="0" width="66.291" height="131.066" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="heading-banner" transform="translate(-488 -2609)">
+    <path id="banner" d="M43.479,46.062H9.059l4.618-7.54L0,17.459,9.059,0H459.143V46.062Z" transform="translate(537.857 2654.747)" fill="rgba(46,46,46,0.3)"/>
+    <g transform="matrix(1, 0, 0, 1, 488, 2609)" filter="url(#Logo)">
+      <path id="Logo-2" data-name="Logo" d="M0,82.992H6.94l18.3,20.61L41.351,78.654,25.237,49.974,6.309,75.211l18.928,3.444L0,78.365l23.12-31.79L6.94,20.531,25.158,0,41.64,15.9H37.014L25.158,4.627l-15.9,15.9L25.067,43.9l.169-.233.027.042L39.327,21.688,25.105,20.531H43.954L27.174,46.71,39.849,66.627l8.442,12.028L25.237,113.066Z" transform="translate(9 6)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
